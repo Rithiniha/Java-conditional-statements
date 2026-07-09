@@ -1,0 +1,40 @@
+package Jumpsssss;
+import java.util.*;
+public class Armstrong {
+
+	public static void main(String[] args) {
+		
+		        int a;
+		        int original;
+		        int digits = 0;
+		        int sum = 0;
+
+		        Scanner s = new Scanner(System.in);
+		        System.out.print("Enter a number: ");
+		        a = s.nextInt();
+
+		        original = a;
+
+		      
+		        for (int temp = a; temp > 0; temp = temp / 10) {
+		            digits++;
+		        }
+		        for (int temp = a; temp > 0; temp = temp / 10) {
+		            int digit = temp % 10;
+
+		            int power = 1;
+		            for (int i = 1; i <= digits; i++) {
+		                power = power * digit;
+		            }
+
+		            sum = sum + power;
+		        }
+
+		      
+		        if (original == sum) {
+		            System.out.println("Armstrong number");
+		        } else {
+		            System.out.println("Not an Armstrong number");
+		        }
+		    }
+		}
